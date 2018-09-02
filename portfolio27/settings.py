@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['165.227.9.63', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -86,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'portfoliodb',
-        'USER': 'postgres',
+        'USER': 'djangodbman',
         'PASSWORD': 'django1234',
         'HOST': 'localhost',
         'PORT': '5432'
