@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Album example for Bootstrap</title>
+    <title>Web site using Django</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -47,7 +47,7 @@
             <div class="container">
                 <h1 class="jumbotron-heading">Hi, I am Oleg.</h1>
                 <p class="lead text-muted">Hey, my name is Oleg Khryashchev and I like to build Django web sites!<br>Angular
-                    and React JS have a place in my heart too!<br>But most of all I love Gunicorn and UWSGI!</p>
+                    and React JS have a place in my heart too!<br>But most of all I love Gunicorn and uWSGI!</p>
                 <p>
                     <a href="mailto:oleg.khryashchev@gmail.com" class="btn btn-primary my-2">Contact me</a>
                 </p>
@@ -61,7 +61,9 @@
                     {% for job in jobs.all %}
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap">
+                            <div style="background-color:{{ job.bkgcolor }}">
+                                <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap">
+                            </div>
                             <div class="card-body">
                                 <p class="card-text">{{ job.summary }} </p>
                             </div>
