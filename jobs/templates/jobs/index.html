@@ -14,6 +14,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
 
+    <style>
+        .flexbox {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .flexbox .col {
+            flex: 1;
+            margin: 5px;
+
+        }
+
+        .flexbox .col:nth-child(1) {
+            background: #eee;
+            order: 0;
+        }
+
+        .flexbox .col:nth-child(2) {
+            background: #eee;
+            order: 1;
+        }
+
+        .flexbox .col:nth-child(3) {
+            background: #eee;
+            order: 2;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -47,7 +77,7 @@
             <div class="container">
                 <h1 class="jumbotron-heading">Hi, I am Oleg.</h1>
                 <p class="lead text-muted">Hey, my name is Oleg Khryashchev and I like to build Django web sites!<br>Angular
-                    and React JS have a place in my heart too!<br>But most of all I love Gunicorn and uWSGI!</p>
+                    and React JS have a place in my heart too!<br>But most of all I love Gunicorn and nginx!</p>
                 <p>
                     <a href="mailto:oleg.khryashchev@gmail.com" class="btn btn-primary my-2">Contact me</a>
                 </p>
@@ -57,9 +87,9 @@
         <div class="album py-5 bg-light">
             <div class="container">
 
-                <div class="row">
+                <div class="row flexbox">
                     {% for job in jobs.all %}
-                    <div class="col-md-4">
+                    <div class="col-md-4 col">
                         <div class="card mb-4 box-shadow">
                             <div style="background-color:{{ job.bkgcolor }}">
                                 <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap">

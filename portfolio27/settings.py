@@ -85,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'portfoliodb',
-        'USER': 'djangodbman',
+        'USER': 'postgres',  # 'djangodbman',
         'PASSWORD': 'django1234',
         'HOST': 'localhost',
         'PORT': '5432'
