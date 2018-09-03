@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Blog
+
+
+def index(req):
+
+    blogs = Blog.objects.all()
+    return render(req, 'blog/index.html', {'blogs': blogs})
